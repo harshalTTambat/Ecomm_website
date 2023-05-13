@@ -1,0 +1,1161 @@
+<html>
+
+<head>
+  <title>E-Comm Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      
+/* common styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.arrange-left {
+  float: left;
+}
+.wid-25 {
+  width: 25%;
+}
+.wid-50 {
+  width: 50%;
+}
+.wid-75{
+  width: 75%;
+}
+.wid-33{
+  width: 33.3%;
+}
+.next-row{
+  clear: both;
+}
+.common-btn {
+  height: 35px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background-color: #fff;
+  min-width: 50px;
+  text-align: center;
+  color: #949052;
+  margin-right: 10px;
+}
+
+.common-btn span {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.common-btn span i{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.flip-img{
+  transform: scaleX(-1);
+}
+.margin-right-5{
+  margin-right: 5%;
+}
+
+/* Content styling */
+
+.logo h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+.header {
+  margin-top: 25px;
+  min-height: 60px;
+}
+.logo h1 span:first-of-type {
+  padding: 0px 15px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+  color: #d19c97;
+}
+.search-product input {
+  width: 70%;
+  height: 40px;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 18px;
+  color: #666;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+
+.search-product input:focus {
+  outline: none;
+}
+
+.search-product button {
+  height: 40px;
+  border-radius: 0;
+  border: 1px solid #ddd;
+  margin-left: -6px;
+  font-size: 15px;
+  color: #d19c97;
+  background-color: #fff;
+}
+.selected-product {
+  text-align: right;
+}
+
+.full-banner-warapper {
+  border-top: 2px solid #ddd;
+}
+
+/*  */
+.shop-menu {
+  text-align: center;
+  width: 1340px;
+  height: 50px;
+  background-color: #d19c97;
+  box-sizing: border-box;
+}
+
+.right-menu-list {
+  width: 200px;
+  
+}
+.shop-menu ul {
+  display: inline-flex;
+  list-style: none;
+}
+.shop-menu ul li {
+  width: 75px;
+  padding-right: 100px;
+  
+}
+.shop-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+.shop-menu ul li a:hover {
+  color: white;
+}
+.dropdown {
+  display: none;
+}
+.shop-menu ul li:hover .dropdown {
+  display:block;
+  position:absolute;
+  margin-top: -100px;
+  background-color: #d1c597;
+  border-radius: 10px;
+  
+
+}
+
+.shop-menu ul li:hover .dropdown ul{
+  display: block;
+}
+
+.shop-menu ul li:hover .dropdown ul li{
+  width: 150px;
+  border-bottom: 1px dotted white;
+  background: transparent;
+  text-align: left;
+  font-size: 12px;
+
+}
+
+.dropdown2 ul li a{
+  color: white;
+}
+.dropdown2 ul li a:hover{
+  color: rgb(172, 127, 127);
+}
+.dropdown2{
+  display: none;
+}
+.hover_me:hover .dropdown2{
+  display: block;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 100px;
+  background-color: #4b4a4a;
+  
+  border-radius: 10px;
+}
+
+.banner {
+  background-image: url('./banner.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  width: 1340px ;
+}
+
+.banner .banner-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: #0000003d;
+}
+.banner-text h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+}
+.banner-text h3 {
+  margin: 0;
+  font-size: 50px;
+}
+.banner-text a.show-now {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 15px;
+}
+/*  */
+
+.features-point {
+  border: 1px solid #ddd;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 25px;
+}
+
+.features-point .icon-text-wrap {
+  padding: 30px;
+  display: flex;
+}
+.icon-text-wrap i {
+  font-size: 30px;
+  color: #d19c97;
+}
+.icon-text-wrap span {
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: 600;
+}
+.category-item {
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.category-item .product-count {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.category-item .category-img img {
+  width: 100%;
+}
+.category-item .category-type h5 {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+/*  */
+.offer-banner {
+  background-color: #edf1ff !important;
+  margin-bottom: 50px;
+  position: relative;
+  margin-right: 25px;
+}
+.offer-banner img {
+  position: absolute;
+  max-width: 50%;
+  max-height: 90%;
+  bottom: 0;
+  z-index: 100;
+  float: left;
+}
+
+.offer-banner .offer-text {
+  text-align: right;
+  padding: 40px;
+}
+
+.offer-banner .offer-text h5 {
+  color: #d19c97 !important;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+.offer-banner .offer-text h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.offer-banner .offer-text button {
+  padding: 15px 30px;
+  color: #d19c97 !important;
+  border: 1px solid #d19c97;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cart {
+  border: 1px solid #ddd;
+  margin-right: 25px;
+  margin-bottom: 50px;
+}
+.cart img {
+  width: 100%;
+}
+.cart .cart-details {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+.cart .cart-details .name-head {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.cart .cart-details .cart-price {
+  display: flex;
+  justify-content: center;
+}
+.cart .cart-price h6 {
+  font-size: 16px;
+  margin: 0;
+  padding: 5px;
+  font-weight: 500;
+}
+.cart .cart-price h6.last {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.cart .cart-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.cart .cart-footer a {
+  color: #d19c97;
+  font-size: 14px;
+}
+.stay-updated {
+  margin-bottom: 100px;
+  background-color: #edf1ff;
+  margin-left: -5.5%;
+  margin-right: -5.5%;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 32%;
+  padding-right: 32%;
+  padding-bottom: 80px;
+}
+.stay-updated .update-text {
+  line-height: 2;
+  color: #666;
+}
+.stay-updated .updated-inputs {
+  display: flex;
+}
+.stay-updated .email-input {
+  flex: 100%;
+  border-radius: 0;
+  height: 47px;
+  border: none;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.stay-updated .email-btn {
+  border-radius: 0;
+  border: 1px solid #d19c97;
+  color: #000;
+  background-color: #d19c97;
+  padding: 13px 30px;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #edf1ff;
+  margin-left: -5.5%;
+  margin-right: -5.5%;
+  padding-left: 5.5%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.footer .footer-desc {
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+.footer .contact-list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+.footer .contact-list .icon {
+  color: #d19c97;
+  width: 25px;
+}
+.quick-links ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2;
+}
+.quick-links ul a {
+  text-decoration: none;
+  color: #333;
+}
+.quick-links ul a i {
+  padding-right: 5px;
+}
+
+.footer .footer-input {
+  border: none;
+  width: 80%;
+  height: 50px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.footer .footer-button {
+  border: 0;
+  background-color: #d19c97;
+  padding: 15px;
+  width: 80%;
+  font-size: 18px;
+}
+.vender-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 10%;
+  margin-bottom: 100px;
+}
+.vender-list img {
+  border: 1px solid #ddd;
+}
+.copy-right {
+  background-color: #edf1ff;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* shop file style */
+.shop-header {
+  background-color: #edf1ff;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+.shop-header h3 {
+  color: #d19c97;
+  font-weight: 400;
+}
+.shop-header h1 {
+  text-transform: uppercase;
+}
+.sort-options {
+  text-align: right;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
+.sort-options select {
+  border: 1px solid #ddd;
+  height: 35px;
+  width: 100px;
+}
+/* custom checkbox */
+.custom-control-check {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-height: 16px;
+  padding-left: 16px;
+}
+.custom-control-input{
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+.custom-control-label{
+  position: relative;
+  margin-bottom: 0px;
+  vertical-align: top;
+}
+.custom-control-label::before{
+  position: absolute;
+  top:3px;
+  left: -25px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  border: #d19c97 solid 1px;
+}
+.custom-control-input:checked ~ .custom-control-label::before{
+  border-color:#d19c97;
+  background-color: #d19c97;
+}
+.custom-control-label::after{
+  position:absolute;
+  top:4px;
+  left:-24px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background: no-repeat 50% / 50% 50%;
+}
+.custom-control-input ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
+}
+/* custom checkbox end */
+
+.custom-control-check{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.filter-prod-count {
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 13px;
+}
+/* cart details start */
+.cart-details{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.cart-details table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-details table thead {
+  color: #666;
+  background-color: #EDF1FF;
+  text-align: center;
+}
+.cart-details table thead th {
+  padding: 15px;
+}
+.cart-details table tbody {
+  text-align: center;
+  vertical-align: middle;
+}
+.cart-details img{
+    width: 60px;
+    vertical-align: middle;
+}
+.cart-details table tbody td {
+  border: 1px solid #edf1ff;
+  display: table-cell;
+  padding: 15px;
+}
+.cart-details .text-with-img{
+  text-align: left;
+}
+.quantity-input {
+  display: flex;
+}
+.quantity-input button {
+  border: 0;
+  background-color: #d19c97;
+  font-size: 24px;
+  width: 30px;
+  border-radius: 0px;
+}
+.quantity-input input {
+  width: 50px;
+  border: 1px solid #ccc;
+  background-color: #edf1ff;
+  text-align: center;
+}
+.cart-details .custom-delete-button{
+  padding: 5px;
+  background-color: #d19c97;;
+}
+/* cart details end */
+/* cart summary style */
+.cart-summary-wrapper{
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.cart-summary-wrapper .coupon-inputs {
+  display: flex;
+  height: 50px;
+}
+
+.coupon-inputs input {
+  border: 1px solid #ddd;
+  border-right: 0;
+  padding-left: 20px;
+  width: 60%;
+}
+.coupon-inputs button{
+  background-color: #d19c97;
+  border: 0;
+  width: 40%;
+}
+.cart-summary-wrapper  .cart-summary-body{
+    border: 1px solid #ddd;
+    margin-top: 50px;
+    padding: 20px;
+}
+.cart-summary-wrapper .cart-summy-item{
+  display: flex;
+    justify-content: space-between;
+}
+.cart-summary-wrapper .total-wrapper {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 20px;
+}
+.cart-summary-wrapper .total-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.total-head h4{
+  margin: 0;
+}
+.proceed-input button {
+  background-color: #d19c97;
+  border: 0;
+  padding: 20px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width:992px) {
+  .wid-25, .wid-50, .wid-75, .wid-33{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .arrange-left{
+    float: none;
+  }
+}
+@media only screen and (max-width:700px) {
+  .banner img{
+    width: 500px;
+  }
+}
+
+/* cart summary style end */
+
+
+@media only screen and (max-width: 992px) {
+  .search-product {
+    display: flex;
+  }
+  .search-product input {
+    flex: 100%;
+  }
+  .selected-product {
+    text-align: left;
+  }
+  .shop-menu ul {
+    display: block;
+  }
+  .shop-menu ul li {
+    padding: 10px;
+  }
+  
+  .stay-updated {
+    padding-top: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+  }
+  .vender-list {
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  .footer {
+    display: block;
+  }
+  .copy-right {
+    flex-direction: column;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo arrange-left wid-25">
+        <h1><span>E</span><span>Comm</span></h1>
+      </div>
+      <div class="search-product arrange-left wid-50">
+        <input type="text" placeholder="Search for Products" />
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="selected-product arrange-left wid-25">
+        <a href="./cart.html">
+          <button class="common-btn">
+            <span>
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              0</span>
+          </button>
+        </a>
+        <button class="common-btn">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+            0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="full-banner-warapper">
+    <div class="wrapper next-row">
+    
+      <div class="wid-75 arrange-left">
+       
+        <div class="shop-menu">
+          <ul class="left-menu-list">
+            <li><a href="#">Electronics</a>
+              <div class="dropdown">
+                <ul>
+                  <li class="hover_me"><a href="#">Mobiles</a>
+                      <div class="dropdown2">
+                          <ul>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Realme</a></li>
+                            <li><a href="#">Oppo</a></li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li class="hover_me"><a href="#">Television</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Sony</a></li>
+                        <li><a href="#">OnePlus</a></li>
+                        <li><a href="#">samsung</a></li>
+                        <li><a href="#">LG</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                  <li class="hover_me"><a href="#">Home Applinces</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Oven</a></li>
+                        <li><a href="#">Refregerator</a></li>
+                        <li><a href="#">Mixer</a></li>
+                        <li><a href="#">Fan</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                  <li class="hover_me"><a href="#">Accessories</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Charger</a></li>
+                        <li><a href="#">Earphones</a></li>
+                        <li><a href="#">Mobile covers</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="#">Clothing</a>
+              <div class="dropdown">
+                <ul>
+                  <li class="hover_me"><a href="#">Men</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Suits</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                  <li class="hover_me"><a href="#">Women</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Indian</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Western</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                  <li><a href="#">Kids</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="#">Footwear</a>
+              <div class="dropdown">
+                <ul>
+                  <li class="hover_me"><a href="#">shoes</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Formals</a></li>
+                        <li><a href="#">Funky</a></li>
+                        <li><a href="#">Sports</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                  <li><a href="#">Sleepers</a></li>
+                  <li class="hover_me"><a href="#">Sandals</a>
+                    <div class="dropdown2">
+                      <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Woman</a></li>
+                        <li><a href="#">Kids</a></li>
+                      </ul>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Furniture</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Dianing table</a></li>
+                  <li><a href="#">Chairs</a></li>
+                  <li><a href="#">Beds</a></li>
+                  <li><a href="#">Sofas</a></li>
+                </ul>
+              </div>
+            </li>
+           
+          </ul>
+          <ul class="right-menu-list">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+
+        <div class="banner">
+          
+          <div class="banner-text">
+            <h4>10% off Your First Order</h4>
+            <h3>Fashionable Dress</h3>
+            <a class="show-now">Show Now</a>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="wrapper next-row">
+      <div class="wid-25 arrange-left">
+        <div class="features-point">
+          <span class="icon-text-wrap">
+            <i class="fa-solid fa-check"></i>
+            <span> Quality Products</span>
+          </span>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="features-point">
+          <span class="icon-text-wrap">
+            <i class="fa-solid fa-shipping-fast"></i>
+            <span> Free Shipping</span>
+          </span>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="features-point">
+          <span class="icon-text-wrap">
+            <i class="fa-solid fa-exchange-alt"></i>
+            <span>14 Days Return</span>
+          </span>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="features-point">
+          <span class="icon-text-wrap">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>24/7 Support</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper next-row">
+      <div class="wid-33 arrange-left">
+        <div class="category-item">
+          <div class="product-count">20 Products</div>
+          <div class="category-img">
+            <img src="./cat-1.jpg" />
+          </div>
+          <div class="category-type">
+            <h5>Men's Dresses</h5>
+          </div>
+        </div>
+      </div>
+      <div class="wid-33 arrange-left">
+        <div class="category-item">
+          <div class="product-count">80 Products</div>
+          <div class="category-img">
+            <a href="./shop.html"><img src="./cat-2.jpg" /></a>
+
+          </div>
+          <div class="category-type">
+            <h5>Women's Dresses</h5>
+          </div>
+        </div>
+      </div>
+      <div class="wid-33 arrange-left">
+        <div class="category-item">
+          <div class="product-count">40 Products</div>
+          <div class="category-img">
+            <img src="./cat-3.jpg" />
+          </div>
+          <div class="category-type">
+            <h5>Boy's Dresses</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper next-row">
+      <div class="wid-50 arrange-left">
+        <div class="offer-banner">
+          <img src="./ele_offer.png" alt="" />
+          <div class="offer-text">
+            <h5>20% off the all order</h5>
+            <h3>On Electronics</h3>
+            <button>Show Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="wid-50 arrange-left">
+        <div class="offer-banner">
+          <img class="flip-img" src="./mob_offer.png" alt="" />
+          <div class="offer-text">
+            <h5>Upto 30% off the all order</h5>
+            <h3>SmartPhones</h3>
+            <button>Show Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper next-row">
+      <div class="wid-25 arrange-left">
+        <div class="cart">
+          <div>
+            <img src="./bag1.jpg" alt="" />
+          </div>
+          <div class="cart-details">
+            <h6 class="name-head">Colorful Stylish Shirt</h6>
+            <div class="cart-price">
+              <h6 class="current">823.00 Rs</h6>
+              <h6 class="last">1130.00 Rs</h6>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <a href="#">
+              <i class="fa-solid fa-eye"></i>
+              View Details
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="cart">
+          <div>
+            <img src="./foot.jpg" alt="" />
+          </div>
+          <div class="cart-details">
+            <h6 class="name-head">Stylish sneckers</h6>
+            <div class="cart-price">
+              <h6 class="current">423.00 Rs</h6>
+              <h6 class="last">530.00 Rs</h6>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <a href="#">
+              <i class="fa-solid fa-eye"></i>
+              View Details
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="cart">
+          <div>
+            <img src="./toy1.jpg" alt="" />
+          </div>
+          <div class="cart-details">
+            <h6 class="name-head">toys</h6>
+            <div class="cart-price">
+              <h6 class="current">323.00 Rs</h6>
+              <h6 class="last">530.00 Rs</h6>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <a href="#">
+              <i class="fa-solid fa-eye"></i>
+              View Details
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="wid-25 arrange-left">
+        <div class="cart">
+          <div>
+            <img src="./watch.jpg" alt="" />
+          </div>
+          <div class="cart-details">
+            <h6 class="name-head">Couple watches</h6>
+            <div class="cart-price">
+              <h6 class="current">500.00 Rs</h6>
+              <h6 class="last">730.00 Rs</h6>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <a href="#">
+              <i class="fa-solid fa-eye"></i>
+              View Details
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              Add to Cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper next-row">
+      <div class="stay-updated">
+        <h1>Stay Updated</h1>
+        <p class="update-text">
+          Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam
+          labore at justo ipsum eirmod duo labore labore.
+        </p>
+        <div class="updated-inputs">
+          <input type="text" class="email-input" placeholder="Email Goes Here" />
+          <button class="email-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="vender_list">
+      <img src="./v1.png" alt="" />
+      <img src="./v2.png" alt="" />
+      <img src="./v3.png" alt="" />
+      <img src="./v4.jpg" alt="" />
+      <img src="./v5.png" alt="" />
+    </div>
+    <div class="wrapper next-row">
+      <div class="footer">
+        <div class="wid-25 arrange-left margin-right-5">
+          <div class="logo">
+            <h1><span>E</span><span>Comm</span></h1>
+          </div>
+          <p class="footer-desc">
+            Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum
+            no sit erat lorem et magna ipsum dolore amet erat.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <i class="fa fa-map-marker-alt icon"></i>123 Street, India.
+            </li>
+            <li><i class="fa fa-envelope icon"></i>info@example.com</li>
+            <li><i class="fa fa-phone icon"></i>+012 345 67890</li>
+          </ul>
+        </div>
+        <div class="wid-25 quick-links arrange-left">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Home</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Our Shops</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Shop Details</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Checkout</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>About Us</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Cart</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="wid-25 quick-links arrange-left">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Home</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Our Shops</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Shop Details</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Checkout</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>About Us</span></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-angle-right"></i><span>Cart</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="wid-25 arrange-left">
+          <h3>News Letter</h3>
+          <input type="text" class="footer-input" placeholder="Enter Name" />
+          <input type="text" class="footer-input" placeholder="Enter Email" />
+          <button class="footer-button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
